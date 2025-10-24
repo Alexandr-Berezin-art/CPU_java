@@ -22,9 +22,18 @@ public class Command {
         return instruction;
     }
 
-    public String[] getOperands() {
-        return operands;
+    public String getRegisterName() {
+        return operands[0];
     }
+
+    public String getValue() {
+        return operands[0];
+    }
+
+    public String getAddress() {
+        return operands[1];
+    }
+
 
     public String getOperandIndex(int index) throws RuntimeException
     {

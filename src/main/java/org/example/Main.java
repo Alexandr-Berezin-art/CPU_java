@@ -5,15 +5,24 @@ import org.example.processor.*;
 public class Main {
     public static void main(String[] args) {
         Command[] prog = {
-                new Command("init", "a", "20"),     // a = 20
-                new Command("init", "b", "25"),     // b = 25
-                new Command("add"),                 // result = a + b
-                new Command("print"),               // вывод результата
-                new Command("mv", "c", "d"), // temp = result
-                new Command("init", "a", "10"),     // a = 10
-                new Command("init", "b", "5"),      // b = 5
-                new Command("sub"),                 // result = a - b
-                new Command("print")                // вывод результата
+
+                new Command("init 20 10"),
+                new Command("init", "25", "11"),
+                new Command("init", "5", "12"),
+
+                new Command("ld", "a", "10"),
+                new Command("ld", "b", "11"),
+                new Command("ld", "c", "12"),
+
+                new Command("add"),
+                new Command("print"),
+
+
+                new Command("st", "d", "13"),
+                new Command("mv a d"),
+                new Command("mv b c"),
+                new Command("div"),
+                new Command("print")
         };
 
         ICpu cpu = BCpu.build();
